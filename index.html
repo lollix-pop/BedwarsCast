@@ -9,7 +9,6 @@
   :root {
     --blue: #1a6fff;
     --blue-dim: #0d3d99;
-    --green: #1db954;
     --bg: #06080f;
     --bg2: #0c1120;
     --bg3: #111827;
@@ -154,32 +153,28 @@ text-align: center;
 }
 .episode-player {
 background: var(--bg2); border: 0.5px solid rgba(26,111,255,0.15);
-border-radius: 20px; padding: 2.5rem; margin-top: 2rem;
+border-radius: 16px; padding: 2rem; margin-top: 2rem;
 transition: border-color 0.3s, box-shadow 0.3s;
 }
 .episode-player:hover {
 border-color: rgba(26,111,255,0.35);
-box-shadow: 0 0 50px rgba(26,111,255,0.06);
+box-shadow: 0 0 40px rgba(26,111,255,0.05);
 }
 .episode-badge {
 display: inline-flex; align-items: center; gap: 0.5rem;
 background: rgba(29,185,84,0.1); border: 1px solid rgba(29,185,84,0.3);
-padding: 0.5rem 1.2rem; border-radius: 20px;
+padding: 0.4rem 1.2rem; border-radius: 20px;
 font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase;
-color: var(--green); margin-bottom: 1.5rem;
+color: #1db954; margin-bottom: 1.2rem;
 }
 .pulse-dot {
-width: 8px; height: 8px; background: var(--green);
+width: 8px; height: 8px; background: #1db954;
 border-radius: 50%; animation: livePulse 1.8s ease-in-out infinite;
 }
 @keyframes livePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.6); } }
 
-.episode-embed {
-border-radius: 12px; overflow: hidden; background: #000;
-width: 100%; min-height: 500px;
-}
-.episode-embed iframe {
-width: 100%; height: 500px; border: none;
+.episode-player iframe {
+border-radius: 12px; width: 100%; height: 152px; border: none;
 }
 
 .episode-links {
@@ -328,8 +323,6 @@ section { padding: 4rem 1.5rem; }
 .about-grid, .members-grid { grid-template-columns: 1fr; }
 .stats-grid { grid-template-columns: repeat(2, 1fr); }
 .episode-player { padding: 1.5rem; }
-.episode-embed { min-height: 350px; }
-.episode-embed iframe { height: 350px; }
 }
 </style>
 </head>
@@ -371,14 +364,12 @@ section { padding: 4rem 1.5rem; }
 
 <!-- Spotify Episoden -->
 <div class="episode-section" id="episodes">
-  <p class="section-label reveal">🎧 Jetzt reinhören & zuschauen</p>
+  <p class="section-label reveal">🎧 Jetzt reinhören</p>
   <h2 class="section-title reveal">Neueste Episoden</h2>
-  <p class="section-desc reveal">Alle Folgen direkt hier anhören – mit Video, wenn verfügbar.</p>
+  <p class="section-desc reveal">Hör dir die aktuellste Episode von BedwarsCast direkt hier an.</p>
   <div class="episode-player reveal">
-    <div class="episode-badge"><span class="pulse-dot"></span>Aktuellste Episoden</div>
-    <div class="episode-embed">
-      <iframe src="https://open.spotify.com/embed/show/0MWrs0Q6ul48TBK1HrFjcy?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="BedwarsCast auf Spotify"></iframe>
-    </div>
+    <div class="episode-badge"><span class="pulse-dot"></span>Aktuellste Episode</div>
+    <iframe src="https://open.spotify.com/embed/show/0MWrs0Q6ul48TBK1HrFjcy?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="BedwarsCast auf Spotify"></iframe>
     <div class="episode-links">
       <a href="https://open.spotify.com/show/0MWrs0Q6ul48TBK1HrFjcy" target="_blank" class="episode-link">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.096-.84-.18-.936-.6-.096-.42.18-.84.6-.936 4.56-1.026 8.52-.6 11.64 1.32.42.18.48.66.252 1.056z"/></svg>
